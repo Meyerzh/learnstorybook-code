@@ -11,7 +11,9 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "init-msw": "msw init public/"
+    "init-msw": "msw init public/",
+    "chromatic2": "npx chromatic --project-token=096a512a9fb1",
+    "chromatic": "npx chromatic --project-token=096a512a9fb1"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^6.4.19",

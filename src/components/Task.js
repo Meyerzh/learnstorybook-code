@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import './button.css';
 export default function Task({
   task: { id, title, state },
   onArchiveTask,
@@ -33,13 +34,21 @@ export default function Task({
       <div className="actions" onClick={(event) => event.stopPropagation()}>
         {state !== "TASK_ARCHIVED" && (
           // eslint-disable-next-line jsx-a11y/anchor-is-valid
-          <a onClick={() => onPinTask(id)}>
-            <span
-              className={`icon-star`}
-              id={`pinTask-${id}`}
-              aria-label={`pinTask-${id}`}
-            />
-          </a>
+          <>
+            <div className="button__wrap">
+              <button
+                type="button"
+                className="storybook-button storybook-button--primary storybook-button--medium"
+              >add a button</button>
+            </div>
+            <a onClick={() => onPinTask(id)}>
+              <span
+                className={`icon-star`}
+                id={`pinTask-${id}`}
+                aria-label={`pinTask-${id}`}
+              />
+            </a>
+          </>
         )}
       </div>
     </div>
